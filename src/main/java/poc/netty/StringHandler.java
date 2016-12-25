@@ -3,6 +3,9 @@ package poc.netty;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
+/**
+ * String based handler. Not used in this example.
+ */
 public class StringHandler extends SimpleChannelInboundHandler<String> {
 
   @Override

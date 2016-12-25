@@ -11,7 +11,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
- * Discards any incoming data.
+ * Server to handle packet data > 1024 bytes.
  */
 public class MyServer {
 
@@ -33,10 +33,7 @@ public class MyServer {
           @Override
           public void initChannel(SocketChannel ch) throws Exception {
 //            ch.pipeline().addLast(new UnfragmentedHandler());
-//            ch.pipeline().addLast("decoder", new StringDecoder());
-//            ch.pipeline().addLast("encoder", new StringEncoder());
             ch.pipeline().addLast("assembler", new MyMessageHandler());
-//            ch.pipeline().addLast("handler", new StringHandler());
           }
         })
         .option(ChannelOption.SO_BACKLOG, 128)
