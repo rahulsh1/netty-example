@@ -7,7 +7,7 @@
   <version>1.0</version>
 
   <properties>
-    <junit.version>4.7</junit.version>
+    <junit.version>4.13.1</junit.version>
     <netty.version>4.1.44.Final</netty.version>
     <port>8080</port>
   </properties>
